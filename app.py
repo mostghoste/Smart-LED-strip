@@ -1,14 +1,15 @@
 from flask import Flask, request, jsonify
-import gpio
+from gpiozero import LED
 app = Flask(__name__)
+led = LED(15)
 
 @app.route('/process/<int:number>', methods=['GET'])
 def process_number(number):
    if number == 1:
-      gpio.turn_on()
+      led.on()
       print("LED turned ON")
    elif number == 2:
-      gpio.turn_off()
+      led.off()
       print("LED turned OFF")
    elif number == 3:
       print("Number is Three")
