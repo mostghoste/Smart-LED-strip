@@ -27,5 +27,5 @@ def process_number(number):
    return jsonify(status='OK')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
     transmitter.enable_tx()
+    app.run(host='0.0.0.0')
