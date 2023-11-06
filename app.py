@@ -14,11 +14,11 @@ def send_signal(code):
 def process_number(number):
    if number == 1:
       led.on()
-      send_signal("TestCode1")
+      send_signal(10)
       print("LED turned ON")
    elif number == 2:
       led.off()
-      send_signal("TestCode2")
+      send_signal(20)
       print("LED turned OFF")
    elif number == 3:
       print("Number is Three")
